@@ -12,7 +12,7 @@ import java.util.Objects;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class Games {
+public class Game {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -42,9 +42,9 @@ public class Games {
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
-        if (!(obj instanceof Games)) return false;
-        Games games = (Games) obj;
-        return Objects.equals(id, games.id);
+        if (!(obj instanceof Game)) return false;
+        Game game = (Game) obj;
+        return Objects.equals(id, game.id);
     }
 
 

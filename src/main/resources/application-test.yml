@@ -17,3 +17,11 @@ spring:
     properties:
       hibernate:
         format_sql: true
+
+  # DevTools
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/resources
+    livereload:
+      enabled: true

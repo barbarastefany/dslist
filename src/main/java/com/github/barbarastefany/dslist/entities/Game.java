@@ -5,8 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Objects;
-
 @Entity
 @Table(name = "tb_game")
 @NoArgsConstructor
@@ -33,19 +31,5 @@ public class Game {
 
     @Column(columnDefinition = "TEXT")
     private String longDescription;
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (!(obj instanceof Game)) return false;
-        Game game = (Game) obj;
-        return Objects.equals(id, game.id);
-    }
-
 
 }

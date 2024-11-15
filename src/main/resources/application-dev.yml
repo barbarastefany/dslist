@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3307/dslist
+    username: root
+    password: 1234567
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    hibernate:
+      ddl-auto: none
+
+  # DevTools
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/resources
+    livereload:
+      enabled: true

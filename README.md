@@ -18,14 +18,6 @@ DSList é um projeto desenvolvido utilizando Java, Spring Boot e Maven que forne
 
 ---
 
-### Exemplos de Requisição no Ambiente de Produção
-
-1. **Recuperar todas as listas de jogos:**
-   ```http
-   GET https://dslist-production-f3c0.up.railway.app/lists
-
----
-
 ### Instalação
 1. Clone o repositório
 ```sh
@@ -54,7 +46,7 @@ mvn spring-boot:run
 
 ---
 
-## Endpoints
+### Endpoints
 
 | método  | endpoint                                           | descrição                                 |
 |---------|----------------------------------------------------|-------------------------------------------|
@@ -75,13 +67,12 @@ No endpoint de `replacement`, deve-se colocar um corpo de requisição com o `in
 
 ---
 
-## Deploy
+### Deploy
 
-### Ambiente de Produção
 A aplicação está hospedada na plataforma Railway e pode ser acessada através do seguinte link:
 
 **URL Base:**  
-[https://dslist-production-f3c0.up.railway.app](https://dslist-production-f3c0.up.railway.app)
+- [https://dslist-production-f3c0.up.railway.app](https://dslist-production-f3c0.up.railway.app)
 
 ### Exemplo de Requisição no Ambiente de Produção
 
@@ -91,7 +82,7 @@ A aplicação está hospedada na plataforma Railway e pode ser acessada através
 
 ---
 
-## Licença
+### Licença
 
 Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 

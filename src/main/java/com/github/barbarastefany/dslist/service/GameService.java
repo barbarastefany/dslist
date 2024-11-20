@@ -27,12 +27,9 @@ public class GameService {
 
     @Transactional(readOnly = true)
     public GameDTO findById(Long id) {
-        try {
-            Game result = gameRepository.findById(id).get();
-            return new GameDTO(result);
-        } catch (Exception e) {
-            throw new GameNotFoundException();
-        }
+        Game result = gameRepository.findById(id)
+                    .orElseThrow(() -> new GameNotFoundException());
+        return new GameDTO(result);
     }
 
     @Transactional(readOnly = true)

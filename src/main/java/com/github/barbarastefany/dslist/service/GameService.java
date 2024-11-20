@@ -3,6 +3,7 @@ package com.github.barbarastefany.dslist.service;
 import com.github.barbarastefany.dslist.dto.GameDTO;
 import com.github.barbarastefany.dslist.dto.GameMinDTO;
 import com.github.barbarastefany.dslist.entities.Game;
+import com.github.barbarastefany.dslist.exceptions.GameNotFoundException;
 import com.github.barbarastefany.dslist.projection.GameMinProjection;
 import com.github.barbarastefany.dslist.repository.GameRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,8 +27,12 @@ public class GameService {
 
     @Transactional(readOnly = true)
     public GameDTO findById(Long id) {
-        Game result = gameRepository.findById(id).get();
-        return new GameDTO(result);
+        try {
+            Game result = gameRepository.findById(id).get();
+            return new GameDTO(result);
+        } catch (Exception e) {
+            throw new GameNotFoundException();
+        }
     }
 
     @Transactional(readOnly = true)
